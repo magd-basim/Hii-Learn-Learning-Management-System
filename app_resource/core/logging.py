@@ -1,0 +1,8 @@
+import logging
+
+def setup_loggingMB(debug: bool = False) -> None:
+
+    logging.basicConfig(
+        level=logging.DEBUG if debug else logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    )

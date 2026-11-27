@@ -1,10 +1,15 @@
 from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
-
+from typing import Literal
 
 class SettingsMB(BaseSettings):
-
-    APP_ENV: str = "development"
+    APP_NAME: str = "hii_learn"
+    APP_ENV: Literal[
+        "development",
+        "testing",
+        "production"
+    ] = "development"
+     
     DEBUG: bool = True
 
     DATABASE_URL: str
