@@ -28,4 +28,4 @@ class SettingsMB(BaseSettings):
     )
 
 
-settings = SettingsMB()
+settings = SettingsMB()  # type: ignore[call-arg]
